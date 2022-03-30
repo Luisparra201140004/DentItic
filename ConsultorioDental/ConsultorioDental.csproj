@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Forms.4.8.0.1451\build\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.4.8.0.1451\build\Xamarin.Forms.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C0A234D-7F9E-49A7-9D22-80DEB5E404C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ConsultorioDental</RootNamespace>
+    <AssemblyName>ConsultorioDental</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=3.0.1.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.3.0.1\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=3.0.1.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.GLControl.3.0.1\lib\net20\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.2.10.0\lib\net46\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.4.8.0.1451\lib\netstandard2.0\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.PancakeView, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.PancakeView.2.3.0.759\lib\net472\Xamarin.Forms.PancakeView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.4.8.0.1451\lib\netstandard2.0\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.WPF, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.Platform.WPF.4.8.0.1451\lib\net461\Xamarin.Forms.Platform.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.4.8.0.1451\lib\netstandard2.0\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="actualizardatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="actualizardatos.Designer.cs">
+      <DependentUpon>actualizardatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administrador.Designer.cs">
+      <DependentUpon>administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="arrojardatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="arrojardatos.Designer.cs">
+      <DependentUpon>arrojardatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="citasdeldoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="citasdeldoc.Designer.cs">
+      <DependentUpon>citasdeldoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="portada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="portada.Designer.cs">
+      <DependentUpon>portada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pacienteadministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pacienteadministrador.Designer.cs">
+      <DependentUpon>pacienteadministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="actualizardatos.resx">
+      <DependentUpon>actualizardatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrador.resx">
+      <DependentUpon>administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="arrojardatos.resx">
+      <DependentUpon>arrojardatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="citasdeldoc.resx">
+      <DependentUpon>citasdeldoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="portada.resx">
+      <DependentUpon>portada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pacienteadministrador.resx">
+      <DependentUpon>pacienteadministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.4.8.0.1451\build\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.4.8.0.1451\build\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.4.8.0.1451\build\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.4.8.0.1451\build\Xamarin.Forms.targets'))" />
+  </Target>
+  <Import Project="..\packages\Xamarin.Forms.4.8.0.1451\build\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.4.8.0.1451\build\Xamarin.Forms.targets')" />
+</Project>
